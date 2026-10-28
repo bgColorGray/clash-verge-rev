@@ -172,6 +172,7 @@
         "expectedStatus": "Beklenen Durum",
         "interval": "Aralık",
         "maxFailedTimes": "Maksimum Başarısız Deneme",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Arayüz Adı",
         "routingMark": "Yönlendirme İşareti",
         "filter": "Filtre",

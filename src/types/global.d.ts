@@ -227,7 +227,7 @@ interface ISeqProfileConfig {
 
 interface IProxyGroupConfig {
   name: string
-  type: 'select' | 'url-test' | 'fallback' | 'load-balance' | 'relay'
+  type: 'select' | 'url-test' | 'fallback' | 'load-balance' | 'smart' | 'relay'
   proxies?: string[]
   use?: string[]
   url?: string
@@ -235,6 +235,7 @@ interface IProxyGroupConfig {
   lazy?: boolean
   timeout?: number
   'max-failed-times'?: number
+  'policy-priority'?: string
   'disable-udp'?: boolean
   'interface-name': string
   'routing-mark'?: number

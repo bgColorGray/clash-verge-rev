@@ -111,6 +111,7 @@
         "url-test": "Pilih proksi berdasarkan keterlambatan tes URL",
         "fallback": "Beralih ke proksi lain saat terjadi kesalahan",
         "load-balance": "Distribusikan proksi berdasarkan penyeimbangan beban",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "Lewatkan melalui rantai proksi yang ditentukan"
       },
       "policies": {

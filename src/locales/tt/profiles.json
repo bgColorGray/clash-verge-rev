@@ -172,6 +172,7 @@
         "expectedStatus": "Көтелгән статус коды",
         "interval": "Интервал",
         "maxFailedTimes": "Иң күп хаталы тикшерү саны",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Интерфейс исеме",
         "routingMark": "Маршрут билгесе",
         "filter": "Фильтр",

@@ -172,6 +172,7 @@
         "expectedStatus": "Status esperado",
         "interval": "Intervalo",
         "maxFailedTimes": "Máximo de falhas",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Nome da interface",
         "routingMark": "Marca de roteamento",
         "filter": "Filtro",

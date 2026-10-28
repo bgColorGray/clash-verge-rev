@@ -111,6 +111,7 @@
         "url-test": "URL 테스트 지연을 기준으로 프록시 선택",
         "fallback": "오류 발생 시 다른 프록시로 전환",
         "load-balance": "부하 분산에 따라 프록시 분배",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "정의된 프록시 체인을 통과"
       },
       "policies": {

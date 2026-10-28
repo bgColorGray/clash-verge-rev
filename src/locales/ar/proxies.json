@@ -111,6 +111,7 @@
         "url-test": "اختيار الوكيل بناءً على تأخير اختبار الرابط",
         "fallback": "التبديل إلى وكيل آخر عند حدوث خطأ",
         "load-balance": "توزيع التحميل بين الوكلاء",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "التمرير عبر سلسلة الوكلاء المحددة"
       },
       "policies": {

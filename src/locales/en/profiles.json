@@ -172,6 +172,7 @@
         "expectedStatus": "Expected Status",
         "interval": "Interval",
         "maxFailedTimes": "Max Failed Times",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Interface Name",
         "routingMark": "Routing Mark",
         "filter": "Filter",

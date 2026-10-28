@@ -172,6 +172,7 @@
         "expectedStatus": "الحالة المتوقعة",
         "interval": "الفاصل الزمني",
         "maxFailedTimes": "الحد الأقصى لمحاولات الفشل",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "اسم الواجهة",
         "routingMark": "علامة التوجيه",
         "filter": "تصفية",

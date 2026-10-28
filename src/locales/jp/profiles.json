@@ -172,6 +172,7 @@
         "expectedStatus": "期待するステータスコード",
         "interval": "チェック間隔",
         "maxFailedTimes": "最大失敗回数",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "出力インターフェース",
         "routingMark": "ルーティングマーク",
         "filter": "ノードをフィルタリング",

@@ -172,6 +172,7 @@
         "expectedStatus": "Erwarteter Statuscode",
         "interval": "Prüfintervall",
         "maxFailedTimes": "Maximale Anzahl fehlgeschlagener Versuche",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Ausgangsschnittstelle",
         "routingMark": "Routierungsmarkierung",
         "filter": "Knoten filtern",

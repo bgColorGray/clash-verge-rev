@@ -161,13 +161,13 @@ async function updateHashCache(targetPath) {
 
 // Mihomo release maps
 const META_ALPHA_VERSION_URL =
-  'https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/version.txt'
-const META_ALPHA_URL_PREFIX = `https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha`
+  'https://github.com/bgColorGray/mihomo/releases/latest/download/version.txt'
+const META_ALPHA_URL_PREFIX = `https://github.com/bgColorGray/mihomo/releases/download`
 let META_ALPHA_VERSION
 
 const META_VERSION_URL =
-  'https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt'
-const META_URL_PREFIX = `https://github.com/MetaCubeX/mihomo/releases/download`
+  'https://github.com/bgColorGray/mihomo/releases/latest/download/version.txt'
+const META_URL_PREFIX = `https://github.com/bgColorGray/mihomo/releases/download`
 let META_VERSION
 
 const META_ALPHA_MAP = {
@@ -281,7 +281,7 @@ function clashMetaAlpha() {
     targetFile: `verge-mihomo-alpha-${SIDECAR_HOST}${isWin ? '.exe' : ''}`,
     exeFile: `${name}${isWin ? '.exe' : ''}`,
     zipFile: `${name}-${META_ALPHA_VERSION}.${urlExt}`,
-    downloadURL: `${META_ALPHA_URL_PREFIX}/${name}-${META_ALPHA_VERSION}.${urlExt}`,
+    downloadURL: `${META_ALPHA_URL_PREFIX}/${META_ALPHA_VERSION}/${name}-${META_ALPHA_VERSION}.${urlExt}`,
   }
 }
 

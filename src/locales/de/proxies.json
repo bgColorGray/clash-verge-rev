@@ -111,6 +111,7 @@
         "url-test": "Proxy basierend auf URL-Latenztest auswählen",
         "fallback": "Bei Nichtverfügbarkeit zu einem anderen Proxy wechseln",
         "load-balance": "Proxy basierend auf Lastverteilung zuweisen",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "Basierend auf definiertem Proxy-Kette weiterleiten"
       },
       "policies": {

@@ -172,6 +172,7 @@
         "expectedStatus": "期望状态码",
         "interval": "检查间隔",
         "maxFailedTimes": "最大失败次数",
+        "policyPriority": "Smart 策略优先级",
         "interfaceName": "出站接口",
         "routingMark": "路由标记",
         "filter": "过滤节点",

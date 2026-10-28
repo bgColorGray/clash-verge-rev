@@ -111,6 +111,7 @@
         "url-test": "انتخاب پروکسی بر اساس تأخیر آزمایش URL",
         "fallback": "تعویض به پروکسی دیگر در صورت بروز خطا",
         "load-balance": "توزیع پراکسی بر اساس توازن بار",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "عبور از زنجیره پروکسی تعریف شده"
       },
       "policies": {

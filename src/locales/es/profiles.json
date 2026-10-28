@@ -172,6 +172,7 @@
         "expectedStatus": "Código de estado esperado",
         "interval": "Intervalo de comprobación",
         "maxFailedTimes": "Número máximo de fallos",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Nombre de la interfaz de salida",
         "routingMark": "Marca de enrutamiento",
         "filter": "Filtrar nodos",

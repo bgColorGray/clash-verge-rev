@@ -73,6 +73,7 @@ const PROXY_STRATEGY_LABEL_KEYS: Record<string, TranslationKey> = {
   'url-test': 'proxies.components.enums.strategies.url-test',
   fallback: 'proxies.components.enums.strategies.fallback',
   'load-balance': 'proxies.components.enums.strategies.load-balance',
+  smart: 'proxies.components.enums.strategies.smart',
   relay: 'proxies.components.enums.strategies.relay',
 }
 
@@ -176,6 +177,7 @@ export const GroupsEditorViewer = (props: Props) => {
     },
   })
   const [groupList, setGroupList] = useState<IProxyGroupConfig[]>([])
+  const selectedType = formIns.watch('type')
   const [proxyPolicyList, setProxyPolicyList] = useState<string[]>([])
   const [proxyProviderList, setProxyProviderList] = useState<string[]>([])
   const [prependSeq, setPrependSeq] = useState<IProxyGroupConfig[]>([])
@@ -551,6 +553,7 @@ export const GroupsEditorViewer = (props: Props) => {
                           'url-test',
                           'fallback',
                           'load-balance',
+                          'smart',
                           'relay',
                         ]}
                         value={field.value}
@@ -573,6 +576,28 @@ export const GroupsEditorViewer = (props: Props) => {
                     </Item>
                   )}
                 />
+                {selectedType === 'smart' && (
+                  <Controller
+                    name="policy-priority"
+                    control={control}
+                    render={({ field }) => (
+                      <Item>
+                        <ListItemText
+                          primary={t(
+                            'profiles.modals.groupsEditor.fields.policyPriority',
+                          )}
+                        />
+                        <TextField
+                          autoComplete="new-password"
+                          placeholder="Premium:0.9;Backup:1.3"
+                          size="small"
+                          sx={{ width: 'calc(100% - 150px)' }}
+                          {...field}
+                        />
+                      </Item>
+                    )}
+                  />
+                )}
                 <Controller
                   name="name"
                   control={control}
@@ -914,6 +939,7 @@ export const GroupsEditorViewer = (props: Props) => {
                           'Fallback',
                           'URLTest',
                           'LoadBalance',
+                          'Smart',
                           'Ssh',
                         ]}
                         size="small"

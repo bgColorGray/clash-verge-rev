@@ -539,7 +539,7 @@ fn reconcile_selected_nodes(
         };
         let is_selectable_group = matches!(
             &group.proxy_type,
-            ProxyType::Selector | ProxyType::URLTest | ProxyType::Fallback | ProxyType::LoadBalance
+            ProxyType::Selector | ProxyType::URLTest | ProxyType::Fallback | ProxyType::LoadBalance | ProxyType::Smart
         );
         if !is_selectable_group {
             let preferred_node = group
@@ -1356,6 +1356,19 @@ mod tests {
 
         assert_eq!(plan.selected, saved);
         assert_eq!(plan.activations, vec![("group".into(), "saved".into())]);
+        assert_eq!(plan.repaired_count, 0);
+    }
+
+    #[test]
+    fn smart_group_selection_is_restored() {
+        let saved = vec![selected("smart", "saved")];
+        let mut snapshot = proxies(vec![("smart", &["current", "saved"], Some("current"))]);
+        snapshot.proxies.get_mut("smart").unwrap().proxy_type = ProxyType::Smart;
+
+        let plan = reconcile_selected_nodes(&saved, None, &snapshot);
+
+        assert_eq!(plan.selected, saved);
+        assert_eq!(plan.activations, vec![("smart".into(), "saved".into())]);
         assert_eq!(plan.repaired_count, 0);
     }
 

@@ -356,6 +356,7 @@ export interface TranslationResources {
             interval: string
             maxFailedTimes: string
             name: string
+            policyPriority: string
             provider: string
             proxies: string
             routingMark: string
@@ -498,6 +499,7 @@ export interface TranslationResources {
             'load-balance': string
             relay: string
             select: string
+            smart: string
             'url-test': string
           }
         }
@@ -1589,6 +1591,7 @@ export interface TranslationResources {
           noDisney: string
           originalsOnly: string
           pending: string
+          risky: string
           unsupportedRegion: string
           yes: string
         }

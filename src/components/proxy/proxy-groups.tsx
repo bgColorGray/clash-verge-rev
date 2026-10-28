@@ -474,7 +474,8 @@ function NormalProxyGroups(props: { mode: string }) {
 
   const handleChangeProxy = useCallback(
     (group: ProxyGroupView, member: ResolvedProxyMember) => {
-      if (!['Selector', 'URLTest', 'Fallback'].includes(group.type)) return
+      if (!['Selector', 'URLTest', 'Fallback', 'Smart'].includes(group.type))
+        return
       if (!isInteractableMember(member)) return
 
       handleProxyGroupChange(group, { name: member.ref.name })

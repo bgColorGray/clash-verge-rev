@@ -172,6 +172,7 @@
         "expectedStatus": "Status yang Diharapkan",
         "interval": "Interval",
         "maxFailedTimes": "Jumlah Gagal Maksimal",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Nama Antarmuka",
         "routingMark": "Tanda Routing",
         "filter": "Filter",

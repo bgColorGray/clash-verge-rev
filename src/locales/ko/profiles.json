@@ -172,6 +172,7 @@
         "expectedStatus": "예상 상태",
         "interval": "간격",
         "maxFailedTimes": "최대 실패 횟수",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "인터페이스 이름",
         "routingMark": "라우팅 마크",
         "filter": "필터",

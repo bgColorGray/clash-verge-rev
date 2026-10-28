@@ -172,6 +172,7 @@
         "expectedStatus": "وضعیت مورد انتظار",
         "interval": "فاصله زمانی",
         "maxFailedTimes": "حداکثر تعداد شکست‌ها",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "نام رابط",
         "routingMark": "علامت مسیریابی",
         "filter": "فیلتر",

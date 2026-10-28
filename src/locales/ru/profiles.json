@@ -172,6 +172,7 @@
         "expectedStatus": "Ожидаемый статус",
         "interval": "Интервал",
         "maxFailedTimes": "Максимальное число ошибок",
+        "policyPriority": "Smart policy priority",
         "interfaceName": "Имя интерфейса",
         "routingMark": "Марка маршрутизации",
         "filter": "Фильтр",

@@ -111,6 +111,7 @@
         "url-test": "URLテストによる遅延でプロキシを選択",
         "fallback": "利用不可の場合は別のプロキシに切り替える",
         "load-balance": "負荷分散によりプロキシを割り当てる",
+        "smart": "Automatically select using live latency, failures, and site history",
         "relay": "定義されたプロキシチェーンに沿って転送する"
       },
       "policies": {

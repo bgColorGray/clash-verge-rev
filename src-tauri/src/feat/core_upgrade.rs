@@ -22,9 +22,8 @@ use std::{
     sync::atomic::{AtomicU64, Ordering},
 };
 
-const RELEASE_VERSION_URL: &str = "https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt";
-const ALPHA_BASE_URL: &str = "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha";
-const RELEASE_DOWNLOAD_URL: &str = "https://github.com/MetaCubeX/mihomo/releases/download";
+const RELEASE_VERSION_URL: &str = "https://github.com/bgColorGray/mihomo/releases/latest/download/version.txt";
+const RELEASE_DOWNLOAD_URL: &str = "https://github.com/bgColorGray/mihomo/releases/download";
 const VERSION_TIMEOUT_SECS: u64 = 20;
 const PACKAGE_TIMEOUT_SECS: u64 = 300;
 /// Well above any real core package, low enough that a wrong response cannot exhaust memory.
@@ -175,11 +174,9 @@ fn managed_core_path(core: &str) -> Result<PathBuf> {
 fn package_url(alpha: bool, version: &str) -> Result<std::string::String> {
     let asset = asset_base_name(alpha)?;
     let extension = if cfg!(windows) { "zip" } else { "gz" };
-    Ok(if alpha {
-        format!("{ALPHA_BASE_URL}/{asset}-{version}.{extension}")
-    } else {
-        format!("{RELEASE_DOWNLOAD_URL}/{version}/{asset}-{version}.{extension}")
-    })
+    Ok(format!(
+        "{RELEASE_DOWNLOAD_URL}/{version}/{asset}-{version}.{extension}"
+    ))
 }
 
 /// Mirrors the asset map in `scripts/prebuild.mjs` so an upgrade keeps the build variant
@@ -217,13 +214,9 @@ fn asset_base_name(alpha: bool) -> Result<&'static str> {
 }
 
 /// Returns the proxy that reached GitHub so the package download reuses it.
-#[tracing::instrument(skip_all, level = "debug", fields(alpha))]
-async fn resolve_latest_version(alpha: bool) -> Result<(ProxyType, std::string::String)> {
-    let url = if alpha {
-        format!("{ALPHA_BASE_URL}/version.txt")
-    } else {
-        RELEASE_VERSION_URL.to_owned()
-    };
+#[tracing::instrument(skip_all, level = "debug", fields(alpha = _alpha))]
+async fn resolve_latest_version(_alpha: bool) -> Result<(ProxyType, std::string::String)> {
+    let url = RELEASE_VERSION_URL.to_owned();
     let mut last_error = None;
 
     for proxy in [ProxyType::Localhost, ProxyType::System, ProxyType::None] {
@@ -494,6 +487,6 @@ mod tests {
             release.ends_with("-v1.19.30.gz") || release.ends_with("-v1.19.30.zip"),
             "{release}"
         );
-        assert!(alpha.contains("/Prerelease-Alpha/"), "{alpha}");
+        assert!(alpha.contains("/releases/download/alpha-c0e43eb/"), "{alpha}");
     }
 }
